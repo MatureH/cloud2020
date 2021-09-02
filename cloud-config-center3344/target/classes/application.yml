@@ -1,0 +1,27 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center # 注册到eureka服务器的微服务名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:MatureH/springcloud-config.git
+          #### 搜索目录
+          search-paths:
+            - springcloud-config
+          username: MatureH
+          password: hmc19991127..
+          skip-ssl-validation: true
+      # 读取分支
+      label: master
+
+eureka:
+  instance:
+    hostname: config-3344.com
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
