@@ -10,7 +10,7 @@ spring:
     druid:
       url: jdbc:mysql://127.0.0.1:3306/humc?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
-      password: mysql
+      password: root
       initial-size: 1
       validation-query: SELECT 1
     hikari:
