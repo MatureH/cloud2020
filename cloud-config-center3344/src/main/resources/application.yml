@@ -4,19 +4,29 @@ server:
 spring:
   application:
     name: cloud-config-center # 注册到eureka服务器的微服务名称
+  security:
+    user:
+
   cloud:
     config:
       server:
         git:
-          uri: git@github.com:MatureH/springcloud-config.git
+          uri: https://github.com/MatureH/springcloud-config.git
+          ignoreLocalSshSettings: true
+#          hostKey: someHostKey
+#          hostKeyAlgorithm: ssh-rsa
           #### 搜索目录
           search-paths:
             - springcloud-config
+          skip-ssl-validation: true
+          force-pull: true
           username: MatureH
           password: hmc19991127..
-          skip-ssl-validation: true
+
+
       # 读取分支
       label: master
+
 
 eureka:
   instance:
