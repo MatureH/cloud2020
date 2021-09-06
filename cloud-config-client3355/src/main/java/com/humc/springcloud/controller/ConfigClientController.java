@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class ConfigClientController {
 
-    @Value("${server.port}")
-    private String serverPort;
+    @Value("${config.info}")
+    private String configInfo;
 
-    @GetMapping("/serverPort")
+    @GetMapping("/configInfo")
     public String getServerPort() {
-        return serverPort;
+        return configInfo;
     }
 
 }
