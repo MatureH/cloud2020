@@ -19,14 +19,18 @@ spring:
           search-paths:
             - springcloud-config
           skip-ssl-validation: true
-          force-pull: true
           username: MatureH
           password: hmc19991127..
-
-
+          timeout: 10
       # 读取分支
       label: master
 
+  # 配置rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   instance:
@@ -35,3 +39,12 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+
+
+
+# 暴露bus刷新配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
