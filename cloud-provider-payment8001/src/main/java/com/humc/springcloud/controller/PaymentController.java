@@ -46,12 +46,17 @@ public class PaymentController {
     }
 
     @GetMapping(value = "/payment/timeout")
-    public String getTimeout(){
+    public String getTimeout() {
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return serverPort;
+    }
+
+    @GetMapping(value = "/payment/zipkin")
+    public String paymentZipkin() {
+        return "hi, i`am paymentZipKin server fall back, welcome to HuMc";
     }
 }

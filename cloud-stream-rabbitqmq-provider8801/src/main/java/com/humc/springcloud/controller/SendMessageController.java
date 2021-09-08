@@ -1,4 +1,4 @@
-package com.humc.springcloud.service.controller;
+package com.humc.springcloud.controller;
 
 import com.humc.springcloud.service.IMessageProvider;
 import lombok.extern.slf4j.Slf4j;

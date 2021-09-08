@@ -27,6 +27,7 @@
         <module>cloud-config-client3366</module>
         <module>cloud-stream-rabbitqmq-provider8801</module>
         <module>cloud-stream-rabbitqmq-provider8802</module>
+        <module>cloud-stream-rabbitqmq-consumer8803</module>
     </modules>
     <packaging>pom</packaging>
 

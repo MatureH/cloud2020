@@ -12,8 +12,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class StreamMain8802 {
+public class StreamMain8803 {
     public static void main(String[] args) {
-        SpringApplication.run(StreamMain8802.class, args);
+        SpringApplication.run(StreamMain8803.class, args);
     }
 }
